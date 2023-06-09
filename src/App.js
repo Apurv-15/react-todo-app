@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import {Button,FormControl,InputLabel,Input} from '@material-ul/core';
+import Todo from './Todo';
 import { Button,FormControl, InputLabel,Input} from '@mui/material';
 
 import './style.css';
@@ -43,9 +43,10 @@ export default function App() {
 
       <ul>
         {todos.map((todo) => (
-          <li>{todo}</li>
+          <Todo text={todo}/>
+          // <li>{todo}</li>
         ))}
-      </ul>
+      </ul> 
     </div>
   );
 }
