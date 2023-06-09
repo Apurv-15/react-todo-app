@@ -49,7 +49,7 @@ export default function App() {
           // <li>{todo}</li>
           <List>
           <ListItem>
-            <ListItemText primary={todo} secondary="Dummy deadline" />
+            <ListItemText primary={todo} secondary="Dummy deadline ⏳" />
           </ListItem>
         </List>
         ))}
