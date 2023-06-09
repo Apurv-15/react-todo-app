@@ -6,7 +6,7 @@ export default function App() {
   const [input, setInput] = useState('');
 
   const addTodo = (event) => {
-    setTodos(...todos, input);
+    setTodos([...todos, input]);
   };
 
   return (
@@ -22,6 +22,7 @@ export default function App() {
           Add todo
         </button>
       </form>
+
       <ul>
         {todos.map(todo => (
           <li>{todo}</li>
