@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
+import Button from '@mui/material/Button';
 
 import './style.css';
 
 export default function App() {
-  const [todos, setTodos] = useState(['Heelo', 'bye']);
+  const [todos, setTodos] = useState(['Dog is walking', 'Go to gym']);
   const [input, setInput] = useState('');
 
   const addTodo = (event) => {
@@ -22,10 +23,10 @@ export default function App() {
           onChange={(event) => setInput(event.target.value)}
         />
         
-
-        <button type="submit" onClick={addTodo}>
+        <Button type="submit" onClick={addTodo} variant="contained"> Add todo</Button>
+        {/* <button type="submit" onClick={addTodo}>
           Add todo
-        </button>
+        </button> */}
       </form>
 
       <ul>
