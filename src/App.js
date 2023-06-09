@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Todo from './Todo';
+import Todo from 'Todo.js';
 import { Button,FormControl, InputLabel,Input} from '@mui/material';
 
 import './style.css';
