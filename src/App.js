@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Todo from 'Todo.js';
-import { Button,FormControl, InputLabel,Input} from '@mui/material';
+import Todo from './Todo';
+import { Button, FormControl, InputLabel, Input } from '@mui/material';
 
 import './style.css';
 
@@ -19,12 +19,14 @@ export default function App() {
     <div className="App">
       <h1>Hello Apurv🚀</h1>
       <form>
-        <input/>
+        <input />
 
         <FormControl>
           <InputLabel>Write a todo!!!</InputLabel>
-          <Input value={input}
-          onChange={(event) => setInput(event.target.value)}/>
+          <Input
+            value={input}
+            onChange={(event) => setInput(event.target.value)}
+          />
         </FormControl>
 
         <Button
@@ -43,10 +45,10 @@ export default function App() {
 
       <ul>
         {todos.map((todo) => (
-          <Todo text={todo}/>
+          <Todo text={todo} />
           // <li>{todo}</li>
         ))}
-      </ul> 
+      </ul>
     </div>
   );
 }
