@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Todo from './Todo.js';
-import { Button, FormControl, InputLabel, Input } from '@mui/material';
+import { Button, FormControl, InputLabel, Input,List,ListItem,ListItemText } from '@mui/material';
 
 import './style.css';
 
@@ -45,8 +45,13 @@ export default function App() {
 
       <ul>
         {todos.map((todo) => (
-          <Todo text={todo} />//doubt not showing any ul
+          // <Todo text={todo} />//doubt not showing any ul
           // <li>{todo}</li>
+          <List>
+          <ListItem>
+            <ListItemText primary={todo} secondary="Dummy deadline" />
+          </ListItem>
+        </List>
         ))}
       </ul>
     </div>
