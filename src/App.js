@@ -2,14 +2,12 @@ import React, { useState } from 'react';
 import './style.css';
 
 export default function App() {
-  const sum = 1 + 1;
-  const [todos, setData] = useState(['Heelo', 'bye']);
+  const [todos, setTodos] = useState(['Heelo', 'bye']);
   const [input, setInput] = useState('');
 
-  const addTodo=(event)=>
-  {
-    
-  }
+  const addTodo = (event) => {
+    setTodos(...todos, input);
+  };
 
   return (
     <div className="App">
@@ -19,11 +17,13 @@ export default function App() {
           value={input}
           onChange={(event) => setInput(event.target.value)}
         />
-        {/* <button onClick={()=>setData(data+1)}>update data</button> */}
-        <button>Add todo</button>
+
+        <button type="submit" onClick={addTodo}>
+          Add todo
+        </button>
       </form>
       <ul>
-        {todos.map((todo) => (
+        {todos.map(todo => (
           <li>{todo}</li>
         ))}
       </ul>
