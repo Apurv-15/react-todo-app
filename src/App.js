@@ -6,6 +6,11 @@ export default function App() {
   const [todos, setData] = useState(['Heelo', 'bye']);
   const [input, setInput] = useState('');
 
+  const addTodo=(event)=>
+  {
+    
+  }
+
   return (
     <div className="App">
       <h1>hello apurv</h1>
