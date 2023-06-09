@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import './style.css';
 
 export default function App() {
@@ -9,12 +10,12 @@ export default function App() {
     //this will fire off when we click button
     event.preventDefault();
     setTodos([...todos, input]);
-    setInput('');
+    setInput(''); //clearing the input after clicking add todo
   };
 
   return (
     <div className="App">
-      <h1>hello apurv</h1>
+      <h1>Hello apurv</h1>
       <form>
         <input
           value={input}
