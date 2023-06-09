@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import Button from '@mui/material/Button';
+// import {Button,FormControl,InputLabel,Input} from '@material-ul/core';
+import { Button,FormControl, InputLabel,Input} from '@mui/material';
 
 import './style.css';
 
@@ -18,13 +19,16 @@ export default function App() {
     <div className="App">
       <h1>Hello apurv</h1>
       <form>
-        <input
-          value={input}
-          onChange={(event) => setInput(event.target.value)}
-        />
+        <input/>
+
+        <FormControl>
+          <InputLabel>Write a todo!!!</InputLabel>
+          <Input value={input}
+          onChange={(event) => setInput(event.target.value)}/>
+        </FormControl>
 
         <Button
-          disabled={!input}   //for disabling if no input
+          disabled={!input} //for disabling if no input
           type="submit"
           onClick={addTodo}
           variant="contained"
