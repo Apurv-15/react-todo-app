@@ -6,7 +6,10 @@ export default function App() {
   const [input, setInput] = useState('');
 
   const addTodo = (event) => {
+    //this will fire off when we click button
+    event.preventDefault();
     setTodos([...todos, input]);
+    setInput('');
   };
 
   return (
@@ -17,6 +20,7 @@ export default function App() {
           value={input}
           onChange={(event) => setInput(event.target.value)}
         />
+        
 
         <button type="submit" onClick={addTodo}>
           Add todo
@@ -24,7 +28,7 @@ export default function App() {
       </form>
 
       <ul>
-        {todos.map(todo => (
+        {todos.map((todo) => (
           <li>{todo}</li>
         ))}
       </ul>
