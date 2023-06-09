@@ -22,8 +22,16 @@ export default function App() {
           value={input}
           onChange={(event) => setInput(event.target.value)}
         />
-        
-        <Button type="submit" onClick={addTodo} variant="contained"> Add todo</Button>
+
+        <Button
+          disabled={!input}   //for disabling if no input
+          type="submit"
+          onClick={addTodo}
+          variant="contained"
+        >
+          {' '}
+          Add todo
+        </Button>
         {/* <button type="submit" onClick={addTodo}>
           Add todo
         </button> */}
