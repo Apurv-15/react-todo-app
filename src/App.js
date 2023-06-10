@@ -45,13 +45,8 @@ export default function App() {
 
       <ul>
         {todos.map((todo) => (
-          <Todo text={todo} />//doubt not showing any ul
-          // <li>{todo}</li>
-        //   <List>
-        //   <ListItem>
-        //     <ListItemText primary={todo} secondary="Dummy deadline ⏳" />
-        //   </ListItem>
-        // </List>
+          <Todo text={todo} />
+        
         ))}
       </ul>
     </div>
