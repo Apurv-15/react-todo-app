@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Todo from './Todo.js';
-import { Button, FormControl, InputLabel, Input,List,ListItem,ListItemText } from '@mui/material';
+import { Button, FormControl, InputLabel, Input } from '@mui/material';
 
 import './style.css';
 
@@ -38,9 +38,6 @@ export default function App() {
           {' '}
           Add todo
         </Button>
-        {/* <button type="submit" onClick={addTodo}>
-          Add todo
-        </button> */}
       </form>
 
       <ul>
