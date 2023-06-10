@@ -45,14 +45,14 @@ export default function App() {
 
       <ul>
         {todos.map((todo) => (
-          // <Todo text={todo} />//doubt not showing any ul
+          <Todo text={todo} />//doubt not showing any ul
           // <li>{todo}</li>
-          <List>
-          <ListItem>
-            <ListItemText primary={todo} secondary="Dummy deadline ⏳" />
-          </ListItem>
-        </List>
-        ))}
+        //   <List>
+        //   <ListItem>
+        //     <ListItemText primary={todo} secondary="Dummy deadline ⏳" />
+        //   </ListItem>
+        // </List>
+        // ))}
       </ul>
     </div>
   );
