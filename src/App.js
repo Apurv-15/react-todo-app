@@ -52,7 +52,7 @@ export default function App() {
         //     <ListItemText primary={todo} secondary="Dummy deadline ⏳" />
         //   </ListItem>
         // </List>
-        // ))}
+        ))}
       </ul>
     </div>
   );
