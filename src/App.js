@@ -11,7 +11,7 @@ export default function App() {
   const addTodo = (event) => {
     //this will fire off when we click button
     event.preventDefault();
-    setTodos([...todos, input]);
+    setTodos([...todos, input]); 
     setInput(''); //clearing the input after clicking add todo
   };
 
