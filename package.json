@@ -6,11 +6,12 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.13.4",
-    "@types/react": "^17.0.0 || ^18.0.0",
+    "@types/react": "^18.2.10",
     "es7": "^1.0.7",
     "firebase": "^9.22.2",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "firebaseui": "^6.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
