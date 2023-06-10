@@ -2,11 +2,18 @@ import React, { useState } from 'react';
 import Todo from './Todo.js';
 import { Button, FormControl, InputLabel, Input } from '@mui/material';
 
+import db from './firebase';
+
 import './style.css';
 
 export default function App() {
   const [todos, setTodos] = useState(['Dog is walking', 'Go to gym']);
   const [input, setInput] = useState('');
+
+  useEffect(()=>
+  {
+    db.collection('todos')
+  })
 
   const addTodo = (event) => {
     //this will fire off when we click button
