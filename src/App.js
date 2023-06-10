@@ -12,8 +12,11 @@ export default function App() {
 
   useEffect(()=>
   {
-    db.collection('todos')
-  })
+    db.collection('todos').onSnapshot(snapshot =>
+      {
+        setTodos(snapshot.docs.map(doc =>doc.data().todo))
+      })
+  },[]);
 
   const addTodo = (event) => {
     //this will fire off when we click button
