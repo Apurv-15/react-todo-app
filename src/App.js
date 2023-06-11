@@ -3,7 +3,7 @@ import Todo from './Todo.js';
 import { Button, FormControl, InputLabel, Input } from '@mui/material';
 
 import db from './firebase.js';
-import { collection, getDocs } from 'firebase/firestore';
+// import { collection} from 'firebase/firestore';
 
 import './style.css';
 
@@ -11,13 +11,11 @@ export default function App() {
   const [todos, setTodos] = useState(['Dog is walking', 'Go to gym']);
   const [input, setInput] = useState('');
 
-  useEffect(()=>
-  {
-    db.collection('todos').onSnapshot(snapshot =>
-      {
-        setTodos(snapshot.docs.map(doc =>doc.data().todo))
-      })
-  },[]);
+  useEffect(() => {
+    const unsubscribe = onSnapshot(collection(db, 'todos'), (snapshot) => {
+      setTodos(snapshot.docs.map((doc) => doc.data().todo));
+    });
+
 
   const addTodo = (event) => {
     //this will fire off when we click button
